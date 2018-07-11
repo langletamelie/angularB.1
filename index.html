@@ -5,13 +5,15 @@
   <title>Exercice 1</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
   <script src="assets/js/script.js"></script>
-  <link rel="stylesheet" href="assets/css/style.css"></link>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <div>
-  <form  novalidate>
-    <label>E-mail: <input type="email" ng-model="email" required></input></label>
+  <form name="myForm">
+    <label>E-mail: <input type="email" name="email" ng-model="email" required></input></label>
   </form>
 </div>
+<div ng-show="myForm.email.$valid" id="correct"></div>
+<div ng-show="myForm.email.$error.email" id="incorrect"></div>
 </body>
 </html>
