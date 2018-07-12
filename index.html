@@ -9,9 +9,9 @@
   </head>
   <body ng-app="validForm" ng-controller="validCtrl">
     <form name="form">
-      <input type="text" id="email" name="email" ng-pattern="regex" ng-keypress="testMail()" ng-model="email" />
+      <input type="text" id="email" name="email" ng-pattern="regex" ng-keyup="testMail()" ng-model="email" />
       <div class="valid" ng-show="resultTestMail"></div>
-      <div class="error" ng-show="!resultTestMail"></div>
+      <div class="error" ng-hide="resultTestMail"></div>
     </form>
   </body>
 </html>
